@@ -20,8 +20,8 @@ const User = require("./Models/user.js");
 
 // const { any } = require("joi");
 
-// const MONGO_URL = "mongodb://127.0.0.1:27017/STAYHUB";
-const dbUrl = process.env.ATLASDB_URL;
+const MONGO_URL = "mongodb://127.0.0.1:27017/STAYHUB";
+// const dbUrl = process.env.ATLASDB_URL;
 // connected to datbase
 main()
     .then(() => {
@@ -32,10 +32,10 @@ main()
     });
 
 async function main() {  // database  connected krne ke liye
-    await mongoose.connect(dbUrl);
+    await mongoose.connect(MONGO_URL);
 }
-app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true })); // data reqest ke under pass ho jye
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
@@ -43,9 +43,9 @@ app.use(express.static(path.join(__dirname, "/public"))); // for css
 
 
 //sessions store in atlas
-   
+
 const store = MongoStore.create({
-    mongoUrl: dbUrl,
+    mongoUrl: MONGO_URL,
     crypto: {
         secret: process.env.SECRET,
     },
@@ -118,7 +118,7 @@ app.all(/.*/, (req, res, next) => {   // version change
 //error handling middlewares 
 app.use((err, req, res, next) => {
     let { statusCode = 500, message = "something went wrong" } = err;
-    res.status(statusCode).render("error.ejs", { message });
+    res.status(statusCode).render("listings/error", { message });
     // res.status(statusCode).send(message);
 });
 

@@ -8,25 +8,6 @@ const multer = require('multer');
 const { storage } = require("../cloudConfig.js");
 const upload = multer({ storage });
 
-// search functionality
-router.get("/search", async (req, res) => {
-  const query = req.query.q || "";
-  try {
-    console.log("Search Query:", query);
-
-    const allListings = await Listing.find({
-      title: { $regex: query, $options: "i" }
-    });
-
-    console.log("Results:", allListings);
-    res.render("listings/index", { allListings });
-  } catch (err) {
-    console.error("Search Error:", err.message);  // show the actual error
-    res.status(500).send("Error searching listings");
-  }
-});
-
-
 router
    .route("/")
    .get(wrapAsync(listingController.index))
