@@ -32,7 +32,11 @@ main()
     });
 
 async function main() {  // database  connected krne ke liye
-    await mongoose.connect(dbUrl);
+    await mongoose.connect(dbUrl,  {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      tls: true // enforce TLS
+    });
 }
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
