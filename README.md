@@ -7,7 +7,7 @@ A full-stack Airbnb-inspired backend project built with Node.js, Express, and Mo
 🏘 Listings Management <br/>
 (CRUD operations for properties)
 ⭐ Reviews & Ratings <br/>
-(Users can leave reviews, only author can edit/delete)
+(Users can leave reviews, only author can edit/delete)<br/>
 📍 Map Integration <br/>
 (Location-based listings using Map APIs)
 🔒 Secure Routes & Validation<br/>
