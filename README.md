@@ -3,7 +3,7 @@ A full-stack Airbnb-inspired backend project built with Node.js, Express, and Mo
 
 🚀 Features
 
-🔐User Authentication & Authorization (Register, Login, sessions)
+🔐User Authentication & Authorization (Register, Login, sessions) <br/>
 🏘 Listings Management (CRUD operations for properties)
 ⭐ Reviews & Ratings (Users can leave reviews, only author can edit/delete)
 📍 Map Integration (Location-based listings using Map APIs)
