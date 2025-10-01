@@ -11,7 +11,8 @@ A full-stack Airbnb-inspired backend project built with Node.js, Express, and Mo
 📍 Map Integration <br/>
 (Location-based listings using Map APIs)
 🔒 Secure Routes & Validation<br/>
-📦 Cloudinary Image Uploads (for property photos)
+📦 Cloudinary Image Uploads<br/>
+ (for property photos)<br/>
 ⚡ RESTful APIs with structured routes
 
 
