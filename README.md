@@ -4,19 +4,22 @@ A full-stack Airbnb-inspired backend project built with Node.js, Express, and Mo
 🚀 Features
 
 🔐User Authentication & Authorization (Register, Login, sessions) <br/>
-🏘 Listings Management (CRUD operations for properties)
-⭐ Reviews & Ratings (Users can leave reviews, only author can edit/delete)
-📍 Map Integration (Location-based listings using Map APIs)
-🔒 Secure Routes & Validation
+🏘 Listings Management <br/>
+(CRUD operations for properties)
+⭐ Reviews & Ratings <br/>
+(Users can leave reviews, only author can edit/delete)
+📍 Map Integration <br/>
+(Location-based listings using Map APIs)
+🔒 Secure Routes & Validation<br/>
 📦 Cloudinary Image Uploads (for property photos)
 ⚡ RESTful APIs with structured routes
 
 
 🛠 Tech Stack
 
-Backend: Node.js, Express.js
-Database: MongoDB, Mongoose
-Authentication: Passport.js 
-Templating : EJS
-Cloud Storage: Cloudinary
-Deployment: Render 
+Backend: Node.js, Express.js <br/>
+Database: MongoDB, Mongoose<br/>
+Authentication: Passport.js <br/>
+Templating : EJS<br/>
+Cloud Storage: Cloudinary<br/>
+Deployment: Render <br/>
