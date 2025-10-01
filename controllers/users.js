@@ -31,8 +31,8 @@ module.exports.renderLoginForm = (req,res)=> {
 
 module.exports.login =async(req,res)=>{
     req.flash("success","welcome back to Stayhub!");
-    let redirectUrl = res.locals.redirectUrl || "/listings";
-    res.redirect(redirectUrl);
+    // let redirectUrl = res.locals.redirectUrl || "/listings";
+    res.redirect("/listings");
 };
 
 module.exports.logout =(req,res,next)=> {
