@@ -1,121 +1,207 @@
-body{
-    font-family: "plus jakarta Sans", sans-serif !important;
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
 }
-.container{
-     flex: 1;
+
+/* Container flex grow */
+.container {
+    flex: 1;
 }
+
+/* Navbar */
 .navbar {
     height: 5rem;
     background-color: white;
-
 }
 
 .fa-compass {
     color: #fe424d;
     font-size: 2rem;
-
 }
-
 
 .nav-link {
     color: #222222 !important;
 }
 
-/* footer */
+/* Footer */
+.f-info {
+    text-align: center;
+    min-height: 6rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
 
-.f-info-links {
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-links a {
     text-decoration: none;
     color: #222222;
 }
-
 
 .f-info-links a:hover {
     text-decoration: underline;
 }
 
-.f-info-links,
-.f-info-socials ,
-.f-info-brand {
-    width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-     
-}
-
-
 .f-info-socials i {
-    margin-right: 1rem;
-     font-size: 1.2rem;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
 }
 
-.f-info {
-text-align: center;
-    height: 8rem;
-    background-color: #ebebeb;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-evenly;
-}
-/* #card */
-
-.listing-card{
-    border: none  !important;  
+/* Cards */
+.listing-card {
+    border: none !important;
     margin-bottom: 2rem;
 }
+
 .card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
+    height: auto;
     object-fit: cover !important;
 }
-.card-body{
+
+.card-body {
     padding: 0 !important;
 }
+
 .card-text {
     font-weight: 400 !important;
 }
-.listing-link{
+
+.listing-link {
     text-decoration: none;
 }
-/* card- effect */
 
-.card-img-overlay{
+/* Card hover effect */
+.card-img-overlay {
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
-.card-img-overlay:hover{
-     opacity: 0.2;
-     background-color: white;
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
 }
-.add-btn{
+
+/* Buttons */
+.add-btn,
+.edit-btn {
     background-color: #fe424d !important;
     border: none !important;
+    color: white !important;
 }
-/* edit page */
-.edit-btn{
 
-   background-color: #fe424d !important;
-    border: none !important;
-}
-/* show  */
-.show-img{
+/* Show page */
+.show-img {
     height: 30vh;
+    width: 100%;
+    object-fit: cover;
 }
+
 .btns {
     display: flex;
-
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
-.show-card{
+
+.show-card {
     padding-left: 0;
     padding-right: 0;
 }
 
-/* map */
-
+/* Map */
 #map { 
- height: 400px;
- width: 80vh;
-     }
+    height: 400px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 0.5rem;
+}
+
+/* -------------------------------
+   RESPONSIVE DESIGN
+--------------------------------*/
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+    .navbar {
+        height: 4rem;
+    }
+
+    .fa-compass {
+        font-size: 1.6rem;
+    }
+
+    #map {
+        height: 300px;
+        width: 95%;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .f-info {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .listing-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    #map {
+        height: 250px;
+        width: 100%;
+    }
+
+    .btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btns .btn {
+        width: 100%;
+    }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+    .fa-compass {
+        font-size: 1.4rem;
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+
+    #map {
+        height: 200px;
+    }
+}
