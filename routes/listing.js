@@ -30,7 +30,7 @@ router.get("/search",async (req,res)=>{
             {location:{$regex:query,$options:"i"}},
         ],
     });
-    res.render("Listings/index",{allListings});
+    res.render("listings/index",{allListings});
 
 });
 router.get("/search/suggestions",async(req,res)=>{
