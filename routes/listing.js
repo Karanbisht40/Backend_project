@@ -20,6 +20,39 @@ router
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
 
+//search box
+router.get("/search",async (req,res)=>{
+    const query =req.query.q;
+    if (!query) return res.redirect("/listings");
+     const allListings = await Listing.find({
+        $or:[
+            {title :{$regex :query,$options:"i"}},
+            {location:{$regex:query,$options:"i"}},
+        ],
+    });
+    res.render("Listings/index",{allListings});
+
+});
+router.get("/search/suggestions",async(req,res)=>{
+    const query =req.query.q;
+    if (!query) {
+        return res.json([]);
+    }
+ 
+    const listings = await Listing.find({
+        $or:[
+            {title :{$regex :query,$options:"i"}},
+            {location:{$regex:query,$options:"i"}},
+        ],
+    }).limit(5);
+
+    const suggestions = listings.map(I=>({
+        title:I.title,
+        location:I.title,
+    }));
+    res.json(suggestions);
+});
+
 router
    .route("/:id")
    .get(wrapAsync(listingController.showListing))
