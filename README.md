@@ -1,5 +1,5 @@
-🏡 Airbnb Backend Clone
-A full-stack Airbnb-inspired backend project built with Node.js, Express, and MongoDB, focusing on authentication, listings, and reviews
+StayHub is a full-stack web application inspired by Airbnb.
+Owners can list their homes or rooms with photos, prices, and details, while users can search, view, and book stays securely and conveniently.
 
 🚀 Features
 
