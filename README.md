@@ -18,6 +18,7 @@ Owners can list their homes or rooms with photos, prices, and details, while use
 
 🛠 Tech Stack
 
+frontend: HTML,css, javascript, bootstrap, tailwind <br/>
 Backend: Node.js, Express.js <br/>
 Database: MongoDB, Mongoose<br/>
 Authentication: Passport.js <br/>
